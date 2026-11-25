@@ -8,11 +8,11 @@ Starting: Intent { cmp=com.demerdash.soundplayer/.MainActivity }
 Status: ok
 LaunchState: COLD
 Activity: com.demerdash.soundplayer/.MainActivity
-TotalTime: 1617
-WaitTime: 1669
+TotalTime: 876
+WaitTime: 879
 Complete
-FAIL: python3 ci/ui.py exists text:Aurora Lights 15
-FAIL: python3 ci/ui.py exists text:ليالي مسقط 5
+PASS: python3 ci/ui.py exists text:Aurora Lights 15
+PASS: python3 ci/ui.py exists text:ليالي مسقط 5
 PASS: short (<30s) clip hidden
 == play a song
 state=
@@ -23,13 +23,13 @@ FAIL: python3 ci/ui.py exists id:np_title 5
 == synced lyrics
 FAIL: python3 ci/ui.py exists text:Welcome to SoundPlayer 5
 == media keys
-before: metadata: size=0, description=null / after: metadata: size=0, description=null
-FAIL: test metadata: size=0, description=null != metadata: size=0, description=null
+before: metadata: size=10, description=Desert Wind / after: metadata: size=9, description=Green Valley
+PASS: test metadata: size=9, description=Green Valley != metadata: size=10, description=Desert Wind
 state=
 FAIL: test  = 2
 FAIL: test  = 3
 == notification
-FAIL: grep -q com.demerdash.soundplayer ci-out/notification.txt
+PASS: grep -q com.demerdash.soundplayer ci-out/notification.txt
 == queue
 FAIL: python3 ci/ui.py exists text:Up next 5
 == equalizer
@@ -39,11 +39,11 @@ FAIL: python3 ci/ui.py exists text:Bass boost 5
 FAIL: python3 ci/ui.py exists text:Northern Sky 5
 FAIL: python3 ci/ui.py exists text:Play 5
 FAIL: python3 ci/ui.py exists text:Favorites 5
-== search (Arabic without hamza/diacritics)
+== search
 FAIL: python3 ci/ui.py exists text:Ocean Drive 5
 == settings + light theme
 == rotate + background + resume
 FAIL: test  = 3
 == crash check
 PASS: no crashes / ANRs
-FAILURES: 17
+FAILURES: 13
