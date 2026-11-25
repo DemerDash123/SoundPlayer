@@ -8,8 +8,8 @@ Starting: Intent { cmp=com.demerdash.soundplayer/.MainActivity }
 Status: ok
 LaunchState: COLD
 Activity: com.demerdash.soundplayer/.MainActivity
-TotalTime: 583
-WaitTime: 586
+TotalTime: 1257
+WaitTime: 1268
 Complete
 PASS: python3 ci/ui.py exists text:Aurora Lights 15
 PASS: python3 ci/ui.py exists text:ليالي مسقط 5
@@ -19,9 +19,9 @@ state=3
 PASS: test 3 = 3
 PASS: python3 ci/ui.py exists id:mini_player 5
 == now playing (UI navigation runs paused so uiautomator can reach idle)
-FAIL: python3 ci/ui.py exists id:np_title 5 :: dump failed: ERROR: could not get idle state. dump failed: ERROR: could not get idle state. NOT FOUND: id:np_title 
+PASS: python3 ci/ui.py exists id:np_title 5
 == synced lyrics
-FAIL: python3 ci/ui.py exists text:Welcome to SoundPlayer 5 :: dump failed: ERROR: could not get idle state. dump failed: ERROR: could not get idle state. NOT FOUND: text:Welcome to SoundPlayer 
+PASS: python3 ci/ui.py exists contains:Welcome to SoundPlayer 5
 == media keys
 before: metadata: size=10, description=Aurora Lights / after: metadata: size=10, description=Desert Wind
 PASS: test metadata: size=10, description=Desert Wind != metadata: size=10, description=Aurora Lights
@@ -31,19 +31,19 @@ PASS: test 3 = 3
 == notification
 PASS: grep -q com.demerdash.soundplayer ci-out/notification.txt
 == queue
-FAIL: python3 ci/ui.py exists text:Up next 5 :: dump failed: ERROR: could not get idle state. dump failed: ERROR: could not get idle state. NOT FOUND: text:Up next 
+PASS: python3 ci/ui.py exists text:Up next 5
 == equalizer
-FAIL: python3 ci/ui.py exists text:Bass boost 5 :: NOT FOUND: text:Bass boost 
+PASS: python3 ci/ui.py exists text:Bass boost 5
 == speed dialog
 == tabs
-FAIL: python3 ci/ui.py exists text:Northern Sky 5 :: NOT FOUND: text:Northern Sky 
-FAIL: python3 ci/ui.py exists text:Play 5 :: NOT FOUND: text:Play 
-FAIL: python3 ci/ui.py exists text:Favorites 5 :: NOT FOUND: text:Favorites 
+PASS: python3 ci/ui.py exists text:Northern Sky 5
+PASS: python3 ci/ui.py exists text:Play 5
+PASS: python3 ci/ui.py exists text:Favorites 5
 == search
-FAIL: python3 ci/ui.py exists text:Ocean Drive 5 :: NOT FOUND: text:Ocean Drive 
+PASS: python3 ci/ui.py exists text:Ocean Drive 5
 == settings + light theme
 == background playback
-FAIL: test  = 3 ::  
+PASS: test 3 = 3
 == crash check
 PASS: no crashes / ANRs
-FAILURES: 9
+FAILURES: 0
