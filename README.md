@@ -3,6 +3,12 @@
 A fast, beautiful, **100% offline** music player for Android — inspired by Lark Player, but with
 **no ads, no tracking, no accounts and no internet permission at all**. The whole app is ~230 KB.
 
+<p>
+<img src="docs/screenshots/library.jpg" width="200"> <img src="docs/screenshots/now_playing.jpg" width="200">
+<img src="docs/screenshots/lyrics.jpg" width="200"> <img src="docs/screenshots/equalizer.jpg" width="200">
+<img src="docs/screenshots/albums.jpg" width="200"> <img src="docs/screenshots/light_theme.jpg" width="200">
+</p>
+
 ## Why it's better than Lark Player
 
 | | SoundPlayer | Lark Player |
@@ -48,5 +54,7 @@ ANDROID_JAR=/path/to/android-34.jar ./build.sh
   `ci-results` branch.
 
 ## Tech
+Fully translated to Arabic (العربية) with right-to-left layout.
+
 Pure Java on the Android framework – zero third-party libraries: `MediaPlayer` (gapless via `setNextMediaPlayer`),
 `MediaSession`, `DynamicsProcessing`/`Equalizer`, `MediaStore`. MIT licensed.
