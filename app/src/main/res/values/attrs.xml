@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="spBg" format="color|reference" />
+    <attr name="spSurface" format="color|reference" />
+    <attr name="spSurfaceHigh" format="color|reference" />
+    <attr name="spText" format="color|reference" />
+    <attr name="spTextDim" format="color|reference" />
+    <attr name="spDivider" format="color|reference" />
+    <attr name="spAccent" format="color|reference" />
+    <attr name="spAccentSoft" format="color|reference" />
+    <attr name="spOnAccent" format="color|reference" />
+</resources>

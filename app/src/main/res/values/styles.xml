@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ===== Dark (default) ===== -->
+    <style name="Theme.SP.Dark" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/dark_bg</item>
+        <item name="android:colorBackground">@color/dark_bg</item>
+        <item name="android:colorPrimary">@color/dark_surface</item>
+        <item name="android:colorPrimaryDark">@android:color/transparent</item>
+        <item name="android:colorAccent">?attr/spAccent</item>
+        <item name="android:colorControlActivated">?attr/spAccent</item>
+        <item name="android:colorControlNormal">@color/dark_text_dim</item>
+        <item name="android:textColorPrimary">@color/dark_text</item>
+        <item name="android:textColorSecondary">@color/dark_text_dim</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:alertDialogTheme">@style/Dialog.SP.Dark</item>
+        <item name="android:popupMenuStyle">@style/Popup.SP.Dark</item>
+        <item name="android:windowAnimationStyle">@style/Anim.SP.Window</item>
+        <item name="spBg">@color/dark_bg</item>
+        <item name="spSurface">@color/dark_surface</item>
+        <item name="spSurfaceHigh">@color/dark_surface_high</item>
+        <item name="spText">@color/dark_text</item>
+        <item name="spTextDim">@color/dark_text_dim</item>
+        <item name="spDivider">@color/dark_divider</item>
+        <item name="spAccent">@color/accent_violet</item>
+        <item name="spAccentSoft">@color/accent_violet_soft</item>
+        <item name="spOnAccent">@color/white</item>
+    </style>
+
+    <!-- ===== Light ===== -->
+    <style name="Theme.SP.Light" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/light_bg</item>
+        <item name="android:colorBackground">@color/light_bg</item>
+        <item name="android:colorPrimary">@color/light_surface</item>
+        <item name="android:colorPrimaryDark">@android:color/transparent</item>
+        <item name="android:colorAccent">?attr/spAccent</item>
+        <item name="android:colorControlActivated">?attr/spAccent</item>
+        <item name="android:colorControlNormal">@color/light_text_dim</item>
+        <item name="android:textColorPrimary">@color/light_text</item>
+        <item name="android:textColorSecondary">@color/light_text_dim</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:alertDialogTheme">@style/Dialog.SP.Light</item>
+        <item name="android:popupMenuStyle">@style/Popup.SP.Light</item>
+        <item name="android:windowAnimationStyle">@style/Anim.SP.Window</item>
+        <item name="spBg">@color/light_bg</item>
+        <item name="spSurface">@color/light_surface</item>
+        <item name="spSurfaceHigh">@color/light_surface_high</item>
+        <item name="spText">@color/light_text</item>
+        <item name="spTextDim">@color/light_text_dim</item>
+        <item name="spDivider">@color/light_divider</item>
+        <item name="spAccent">@color/accent_violet</item>
+        <item name="spAccentSoft">@color/accent_violet_soft</item>
+        <item name="spOnAccent">@color/white</item>
+    </style>
+
+    <style name="Theme.SP.Translucent" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="spAccent">@color/accent_violet</item>
+    </style>
+
+    <style name="Anim.SP.Window" parent="android:Animation.Activity" />
+
+    <!-- ===== Accent overlays (applied at runtime with Theme.applyStyle) ===== -->
+    <style name="Accent.Violet" parent="">
+        <item name="spAccent">@color/accent_violet</item>
+        <item name="spAccentSoft">@color/accent_violet_soft</item>
+        <item name="spOnAccent">@color/white</item>
+    </style>
+    <style name="Accent.Blue" parent="">
+        <item name="spAccent">@color/accent_blue</item>
+        <item name="spAccentSoft">@color/accent_blue_soft</item>
+        <item name="spOnAccent">@color/white</item>
+    </style>
+    <style name="Accent.Teal" parent="">
+        <item name="spAccent">@color/accent_teal</item>
+        <item name="spAccentSoft">@color/accent_teal_soft</item>
+        <item name="spOnAccent">@color/white</item>
+    </style>
+    <style name="Accent.Green" parent="">
+        <item name="spAccent">@color/accent_green</item>
+        <item name="spAccentSoft">@color/accent_green_soft</item>
+        <item name="spOnAccent">@color/white</item>
+    </style>
+    <style name="Accent.Orange" parent="">
+        <item name="spAccent">@color/accent_orange</item>
+        <item name="spAccentSoft">@color/accent_orange_soft</item>
+        <item name="spOnAccent">@color/white</item>
+    </style>
+    <style name="Accent.Pink" parent="">
+        <item name="spAccent">@color/accent_pink</item>
+        <item name="spAccentSoft">@color/accent_pink_soft</item>
+        <item name="spOnAccent">@color/white</item>
+    </style>
+    <style name="Accent.Red" parent="">
+        <item name="spAccent">@color/accent_red</item>
+        <item name="spAccentSoft">@color/accent_red_soft</item>
+        <item name="spOnAccent">@color/white</item>
+    </style>
+    <style name="Accent.Gold" parent="">
+        <item name="spAccent">@color/accent_gold</item>
+        <item name="spAccentSoft">@color/accent_gold_soft</item>
+        <item name="spOnAccent">#FF1A1A1A</item>
+    </style>
+
+    <!-- ===== Dialogs & popups ===== -->
+    <style name="Dialog.SP.Dark" parent="android:Theme.Material.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/bg_dialog_dark</item>
+        <item name="android:colorAccent">?attr/spAccent</item>
+        <item name="android:colorControlActivated">?attr/spAccent</item>
+        <item name="android:textColorPrimary">@color/dark_text</item>
+        <item name="android:textColorSecondary">@color/dark_text_dim</item>
+    </style>
+    <style name="Dialog.SP.Light" parent="android:Theme.Material.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/bg_dialog_light</item>
+        <item name="android:colorAccent">?attr/spAccent</item>
+        <item name="android:colorControlActivated">?attr/spAccent</item>
+        <item name="android:textColorPrimary">@color/light_text</item>
+        <item name="android:textColorSecondary">@color/light_text_dim</item>
+    </style>
+    <style name="Popup.SP.Dark" parent="android:Widget.Material.PopupMenu">
+        <item name="android:popupBackground">@drawable/bg_popup_dark</item>
+    </style>
+    <style name="Popup.SP.Light" parent="android:Widget.Material.Light.PopupMenu">
+        <item name="android:popupBackground">@drawable/bg_popup_light</item>
+    </style>
+
+    <!-- ===== Text & widgets ===== -->
+    <style name="SP.Title" parent="">
+        <item name="android:textColor">?attr/spText</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <style name="SP.Subtitle" parent="">
+        <item name="android:textColor">?attr/spTextDim</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <style name="SP.Header" parent="">
+        <item name="android:textColor">?attr/spText</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <style name="SP.Section" parent="">
+        <item name="android:textColor">?attr/spAccent</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.06</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:paddingTop">18dp</item>
+        <item name="android:paddingBottom">6dp</item>
+    </style>
+    <style name="SP.IconButton" parent="">
+        <item name="android:layout_width">@dimen/icon_button</item>
+        <item name="android:layout_height">@dimen/icon_button</item>
+        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:tint">?attr/spText</item>
+    </style>
+    <style name="SP.PillButton" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">22dp</item>
+        <item name="android:paddingEnd">22dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="SP.NpAction" parent="">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+    <style name="SP.NpActionIcon" parent="">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:tint">@color/white</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+    <style name="SP.NpActionLabel" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:textColor">@color/white_70</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+</resources>

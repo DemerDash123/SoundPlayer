@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/row_height"
+    android:background="?android:attr/selectableItemBackground"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp">
+
+    <ImageView
+        android:id="@+id/q_drag"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/menu_move_up"
+        android:scaleType="center"
+        android:src="@drawable/ic_drag"
+        android:tint="?attr/spTextDim" />
+
+    <ImageView
+        android:id="@+id/q_art"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_art"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.demerdash.soundplayer.ui.PlayingBarsView
+                android:id="@+id/q_playing"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginEnd="7dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/q_title"
+                style="@style/SP.Title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="viewStart" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/q_subtitle"
+            style="@style/SP.Subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewStart" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/q_remove"
+        style="@style/SP.IconButton"
+        android:contentDescription="@string/delete"
+        android:focusable="false"
+        android:src="@drawable/ic_close"
+        android:tint="?attr/spTextDim" />
+</LinearLayout>

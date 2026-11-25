@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mini_player"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mini_player_height"
+    android:layout_gravity="bottom"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/bg_mini_player"
+    android:clickable="true"
+    android:elevation="10dp"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="6dp">
+
+        <ImageView
+            android:id="@+id/mini_art"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_art"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mini_title"
+                style="@style/SP.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/mini_artist"
+                style="@style/SP.Subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <com.demerdash.soundplayer.ui.PlayPauseView
+            android:id="@+id/mini_play"
+            android:layout_width="46dp"
+            android:layout_height="46dp" />
+
+        <ImageButton
+            android:id="@+id/mini_next"
+            style="@style/SP.IconButton"
+            android:contentDescription="@string/next"
+            android:src="@drawable/ic_skip_next" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/mini_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="2dp"
+        android:max="1000"
+        android:maxHeight="3dp"
+        android:minHeight="3dp"
+        android:progressDrawable="@drawable/seek_progress_themed" />
+</FrameLayout>

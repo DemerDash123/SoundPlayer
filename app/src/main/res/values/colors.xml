@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dark_bg">#FF0B0C10</color>
+    <color name="dark_surface">#FF16181E</color>
+    <color name="dark_surface_high">#FF20232B</color>
+    <color name="dark_text">#FFF3F4F6</color>
+    <color name="dark_text_dim">#FF9CA3AF</color>
+    <color name="dark_divider">#FF262A33</color>
+
+    <color name="light_bg">#FFF6F6F9</color>
+    <color name="light_surface">#FFFFFFFF</color>
+    <color name="light_surface_high">#FFECEEF3</color>
+    <color name="light_text">#FF111827</color>
+    <color name="light_text_dim">#FF6B7280</color>
+    <color name="light_divider">#FFE3E5EA</color>
+
+    <color name="accent_violet">#FF8B5CF6</color>
+    <color name="accent_violet_soft">#338B5CF6</color>
+    <color name="accent_blue">#FF3B82F6</color>
+    <color name="accent_blue_soft">#333B82F6</color>
+    <color name="accent_teal">#FF14B8A6</color>
+    <color name="accent_teal_soft">#3314B8A6</color>
+    <color name="accent_green">#FF22C55E</color>
+    <color name="accent_green_soft">#3322C55E</color>
+    <color name="accent_orange">#FFF97316</color>
+    <color name="accent_orange_soft">#33F97316</color>
+    <color name="accent_pink">#FFEC4899</color>
+    <color name="accent_pink_soft">#33EC4899</color>
+    <color name="accent_red">#FFEF4444</color>
+    <color name="accent_red_soft">#33EF4444</color>
+    <color name="accent_gold">#FFEAB308</color>
+    <color name="accent_gold_soft">#33EAB308</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_70">#B3FFFFFF</color>
+    <color name="white_50">#80FFFFFF</color>
+    <color name="white_15">#26FFFFFF</color>
+    <color name="black_40">#66000000</color>
+    <color name="black_60">#99000000</color>
+    <color name="widget_bg">#E616181E</color>
+    <color name="launcher_start">#FF7C3AED</color>
+    <color name="launcher_end">#FF2563EB</color>
+</resources>
