@@ -1,0 +1,200 @@
+11-25 23:10:53.393  5185  5185 V MediaPlayer: cleanDrmObj: mDrmObj=null mDrmSessionId=null
+11-25 23:10:53.416  5185  5185 V MediaPlayer: resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+11-25 23:10:53.416  5185  5185 V MediaPlayer: cleanDrmObj: mDrmObj=null mDrmSessionId=null
+11-25 23:10:53.416  5185  5185 V MediaPlayer: resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+11-25 23:10:53.416  5185  5185 V MediaPlayer: cleanDrmObj: mDrmObj=null mDrmSessionId=null
+11-25 23:10:53.422  1727  1758 I MediaProvider: Using lower FS for /storage/emulated/0/Music/SoundPlayerTest/05 Green Valley.ogg
+11-25 23:10:53.430   687   687 V AvrcpMediaPlayerWrapper: onPlaybackStateChanged(): com.demerdash.soundplayer : PlaybackState {state=3, position=0, buffered position=0, speed=0.0, updated=140739, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=2, error=null}
+11-25 23:10:53.437   492  1282 D MediaSessionService: Sending KeyEvent { action=ACTION_UP, keyCode=KEYCODE_MEDIA_NEXT, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=140624, downTime=140624, deviceId=-1, source=0x0, displayId=-1 } to com.demerdash.soundplayer/SoundPlayer (userId=0)
+11-25 23:10:53.444   687   687 V AvrcpMediaPlayerWrapper: onPlaybackStateChanged(): com.demerdash.soundplayer : PlaybackState {state=3, position=0, buffered position=0, speed=1.0, updated=140754, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=2, error=null}
+11-25 23:10:53.447  1727  5265 I MediaProvider: Using lower FS for /storage/emulated/0/Music/SoundPlayerTest/04 Ocean Drive.flac
+11-25 23:10:53.495  1727  1758 I MediaProvider: Using lower FS for /storage/emulated/0/Music/SoundPlayerTest/05 Green Valley.ogg
+11-25 23:10:53.637   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:10:53.637   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:10:53.883   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:10:53.932   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:10:55.582   687   687 E AvrcpMediaPlayerWrapper: Timeout while waiting for metadata to sync for com.demerdash.soundplayer
+11-25 23:10:55.595   687   687 E AvrcpMediaPlayerWrapper:   └ Current Metadata: { mediaId="currsong" title="Green Valley" artist="Blue Coast" album="Waves" duration=40000 trackPosition=3/5 }
+11-25 23:10:55.607   687   687 E AvrcpMediaPlayerWrapper:   └ Current Playstate: PlaybackState {state=3, position=2160, buffered position=0, speed=1.0, updated=142914, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=2, error=null}
+11-25 23:10:55.617   687   687 E AvrcpMediaPlayerWrapper:   └ QueueItem(0): { mediaId="NowPlayingId1" title="Desert Wind" artist="Nova Band" album="" duration=0 trackPosition=1/4 }
+11-25 23:10:55.617   687   687 E AvrcpMediaPlayerWrapper:   └ QueueItem(1): { mediaId="NowPlayingId2" title="Green Valley" artist="Blue Coast" album="" duration=0 trackPosition=2/4 }
+11-25 23:10:55.617   687   687 E AvrcpMediaPlayerWrapper:   └ QueueItem(2): { mediaId="NowPlayingId3" title="Ocean Drive" artist="Blue Coast" album="" duration=0 trackPosition=3/4 }
+11-25 23:10:55.617   687   687 E AvrcpMediaPlayerWrapper:   └ QueueItem(3): { mediaId="NowPlayingId4" title="ليالي مسقط" artist="فرقة الخليج" album="" duration=0 trackPosition=4/4 }
+11-25 23:10:55.618   687   687 V AvrcpMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.demerdash.soundplayer
+11-25 23:10:55.618   687   687 D AvrcpMediaPlayerList: sendMediaUpdate
+11-25 23:10:55.618   687   687 D AvrcpMediaPlayerList: sendMediaUpdate state=PlaybackState {state=3, position=2174, buffered position=0, speed=1.0, updated=142928, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=2, error=null}
+11-25 23:10:57.386   492  2114 D MediaSessionService: Sending KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_MEDIA_PAUSE, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=144643, downTime=144643, deviceId=-1, source=0x0, displayId=-1 } to com.demerdash.soundplayer/SoundPlayer (userId=0)
+11-25 23:10:57.387   492  3069 I MediaFocusControl: abandonAudioFocus() from uid/pid 10167/5185 clientId=android.media.AudioManager@d6d0390com.demerdash.soundplayer.playback.PlaybackService$11@fe09489
+11-25 23:10:57.405   707   707 V MediaTimeout: schedule timeout for 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:10:57.406   687   687 V AvrcpMediaPlayerWrapper: onPlaybackStateChanged(): com.demerdash.soundplayer : PlaybackState {state=2, position=3242, buffered position=0, speed=0.0, updated=144712, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=2, error=null}
+11-25 23:10:57.421   492  1282 D MediaSessionService: Sending KeyEvent { action=ACTION_UP, keyCode=KEYCODE_MEDIA_PAUSE, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=144643, downTime=144643, deviceId=-1, source=0x0, displayId=-1 } to com.demerdash.soundplayer/SoundPlayer (userId=0)
+11-25 23:10:57.456   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:10:57.465   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:10:57.621   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:10:57.622   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:10:57.699   687   687 V AvrcpMediaPlayerWrapper: onPlaybackStateChanged(): com.demerdash.soundplayer : PlaybackState {state=2, position=3534, buffered position=0, speed=0.0, updated=145003, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=2, error=null}
+11-25 23:10:59.702   687   687 E AvrcpMediaPlayerWrapper: Timeout while waiting for metadata to sync for com.demerdash.soundplayer
+11-25 23:10:59.702   687   687 E AvrcpMediaPlayerWrapper:   └ Current Metadata: { mediaId="currsong" title="Green Valley" artist="Blue Coast" album="Waves" duration=40000 trackPosition=3/5 }
+11-25 23:10:59.702   687   687 E AvrcpMediaPlayerWrapper:   └ Current Playstate: PlaybackState {state=2, position=3534, buffered position=0, speed=0.0, updated=145003, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=2, error=null}
+11-25 23:10:59.702   687   687 E AvrcpMediaPlayerWrapper:   └ QueueItem(0): { mediaId="NowPlayingId1" title="Desert Wind" artist="Nova Band" album="" duration=0 trackPosition=1/4 }
+11-25 23:10:59.702   687   687 E AvrcpMediaPlayerWrapper:   └ QueueItem(1): { mediaId="NowPlayingId2" title="Green Valley" artist="Blue Coast" album="" duration=0 trackPosition=2/4 }
+11-25 23:10:59.702   687   687 E AvrcpMediaPlayerWrapper:   └ QueueItem(2): { mediaId="NowPlayingId3" title="Ocean Drive" artist="Blue Coast" album="" duration=0 trackPosition=3/4 }
+11-25 23:10:59.702   687   687 E AvrcpMediaPlayerWrapper:   └ QueueItem(3): { mediaId="NowPlayingId4" title="ليالي مسقط" artist="فرقة الخليج" album="" duration=0 trackPosition=4/4 }
+11-25 23:10:59.702   687   687 V AvrcpMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.demerdash.soundplayer
+11-25 23:10:59.702   687   687 D AvrcpMediaPlayerList: sendMediaUpdate
+11-25 23:10:59.702   687   687 D AvrcpMediaPlayerList: sendMediaUpdate state=PlaybackState {state=2, position=3534, buffered position=0, speed=0.0, updated=145003, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=2, error=null}
+11-25 23:10:59.958   492  2114 D MediaSessionService: Sending KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_MEDIA_PLAY, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=147267, downTime=147267, deviceId=-1, source=0x0, displayId=-1 } to com.demerdash.soundplayer/SoundPlayer (userId=0)
+11-25 23:10:59.958   492  2114 I MediaFocusControl: requestAudioFocus() from uid/pid 10167/5185 clientId=android.media.AudioManager@d6d0390com.demerdash.soundplayer.playback.PlaybackService$11@fe09489 callingPack=com.demerdash.soundplayer req=1 flags=0x0 sdk=35
+11-25 23:10:59.962   687   687 V AvrcpMediaPlayerWrapper: onPlaybackStateChanged(): com.demerdash.soundplayer : PlaybackState {state=3, position=3697, buffered position=0, speed=1.0, updated=147272, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=2, error=null}
+11-25 23:10:59.964   492  3067 D MediaSessionService: Sending KeyEvent { action=ACTION_UP, keyCode=KEYCODE_MEDIA_PLAY, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=147267, downTime=147267, deviceId=-1, source=0x0, displayId=-1 } to com.demerdash.soundplayer/SoundPlayer (userId=0)
+11-25 23:10:59.964   707   707 V MediaTimeout: media timeout cancelled for  0|com.demerdash.soundplayer|7|null|10167, reason: playback started - PlaybackState {state=3, position=3697, buffered position=0, speed=1.0, updated=147272, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=2, error=null}, 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:11:00.175   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:11:00.175   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:11:00.203   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:11:00.203   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:11:01.965   687   687 E AvrcpMediaPlayerWrapper: Timeout while waiting for metadata to sync for com.demerdash.soundplayer
+11-25 23:11:01.967   687   687 E AvrcpMediaPlayerWrapper:   └ Current Metadata: { mediaId="currsong" title="Green Valley" artist="Blue Coast" album="Waves" duration=40000 trackPosition=3/5 }
+11-25 23:11:01.970   687   687 E AvrcpMediaPlayerWrapper:   └ Current Playstate: PlaybackState {state=3, position=5705, buffered position=0, speed=1.0, updated=149280, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=2, error=null}
+11-25 23:11:01.973   687   687 E AvrcpMediaPlayerWrapper:   └ QueueItem(0): { mediaId="NowPlayingId1" title="Desert Wind" artist="Nova Band" album="" duration=0 trackPosition=1/4 }
+11-25 23:11:01.973   687   687 E AvrcpMediaPlayerWrapper:   └ QueueItem(1): { mediaId="NowPlayingId2" title="Green Valley" artist="Blue Coast" album="" duration=0 trackPosition=2/4 }
+11-25 23:11:01.973   687   687 E AvrcpMediaPlayerWrapper:   └ QueueItem(2): { mediaId="NowPlayingId3" title="Ocean Drive" artist="Blue Coast" album="" duration=0 trackPosition=3/4 }
+11-25 23:11:01.973   687   687 E AvrcpMediaPlayerWrapper:   └ QueueItem(3): { mediaId="NowPlayingId4" title="ليالي مسقط" artist="فرقة الخليج" album="" duration=0 trackPosition=4/4 }
+11-25 23:11:01.973   687   687 V AvrcpMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.demerdash.soundplayer
+11-25 23:11:01.973   687   687 D AvrcpMediaPlayerList: sendMediaUpdate
+11-25 23:11:01.973   687   687 D AvrcpMediaPlayerList: sendMediaUpdate state=PlaybackState {state=3, position=5709, buffered position=0, speed=1.0, updated=149284, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=2, error=null}
+11-25 23:11:35.769  5185  5201 W MediaPlayerNative: info/warning (2, 0)
+11-25 23:11:35.773  5185  5185 V MediaPlayer: resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+11-25 23:11:35.773  5185  5185 V MediaPlayer: cleanDrmObj: mDrmObj=null mDrmSessionId=null
+11-25 23:11:35.773  5185  5185 V MediaPlayer: resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+11-25 23:11:35.773  5185  5185 V MediaPlayer: cleanDrmObj: mDrmObj=null mDrmSessionId=null
+11-25 23:11:35.778   687   687 V AvrcpMediaPlayerWrapper: onPlaybackStateChanged(): com.demerdash.soundplayer : PlaybackState {state=3, position=0, buffered position=0, speed=1.0, updated=183087, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=3, error=null}
+11-25 23:11:35.780   687   687 V AvrcpMediaPlayerWrapper: onQueueChanged(): com.demerdash.soundplayer
+11-25 23:11:35.782  1727  5265 I MediaProvider: Using lower FS for /storage/emulated/0/Music/SoundPlayerTest/03 Muscat Nights.mp3
+11-25 23:11:35.788  1727  1758 I MediaProvider: Using lower FS for /storage/emulated/0/Music/SoundPlayerTest/04 Ocean Drive.flac
+11-25 23:11:35.979   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:11:35.979   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:11:36.012   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:11:36.012   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:11:37.806   687   687 E AvrcpMediaPlayerWrapper: Timeout while waiting for metadata to sync for com.demerdash.soundplayer
+11-25 23:11:37.806   687   687 E AvrcpMediaPlayerWrapper:   └ Current Metadata: { mediaId="currsong" title="Ocean Drive" artist="Blue Coast" album="Waves" duration=41000 trackPosition=4/5 }
+11-25 23:11:37.806   687   687 E AvrcpMediaPlayerWrapper:   └ Current Playstate: PlaybackState {state=3, position=2030, buffered position=0, speed=1.0, updated=185117, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=3, error=null}
+11-25 23:11:37.807   687   687 E AvrcpMediaPlayerWrapper:   └ QueueItem(0): { mediaId="NowPlayingId3" title="Ocean Drive" artist="Blue Coast" album="" duration=0 trackPosition=1/2 }
+11-25 23:11:37.807   687   687 E AvrcpMediaPlayerWrapper:   └ QueueItem(1): { mediaId="NowPlayingId4" title="ليالي مسقط" artist="فرقة الخليج" album="" duration=0 trackPosition=2/2 }
+11-25 23:11:37.807   687   687 V AvrcpMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.demerdash.soundplayer
+11-25 23:11:37.807   687   687 D AvrcpMediaPlayerList: sendMediaUpdate
+11-25 23:11:37.807   687   687 D AvrcpMediaPlayerList: sendMediaUpdate state=PlaybackState {state=3, position=2030, buffered position=0, speed=1.0, updated=185117, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=3, error=null}
+11-25 23:12:16.851  5185  5202 W MediaPlayerNative: info/warning (2, 0)
+11-25 23:12:16.854  5185  5185 V MediaPlayer: resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+11-25 23:12:16.854  5185  5185 V MediaPlayer: cleanDrmObj: mDrmObj=null mDrmSessionId=null
+11-25 23:12:16.854  5185  5185 V MediaPlayer: resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+11-25 23:12:16.854  5185  5185 V MediaPlayer: cleanDrmObj: mDrmObj=null mDrmSessionId=null
+11-25 23:12:16.857   687   687 V AvrcpMediaPlayerWrapper: onPlaybackStateChanged(): com.demerdash.soundplayer : PlaybackState {state=3, position=0, buffered position=0, speed=1.0, updated=224167, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=4, error=null}
+11-25 23:12:16.858   687   687 V AvrcpMediaPlayerWrapper: onQueueChanged(): com.demerdash.soundplayer
+11-25 23:12:17.058   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:12:17.059   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:12:17.092   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:12:17.092   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:12:18.870   687   687 E AvrcpMediaPlayerWrapper: Timeout while waiting for metadata to sync for com.demerdash.soundplayer
+11-25 23:12:18.871   687   687 E AvrcpMediaPlayerWrapper:   └ Current Metadata: { mediaId="currsong" title="ليالي مسقط" artist="فرقة الخليج" album="Gulf Album" duration=42057 trackPosition=5/5 }
+11-25 23:12:18.871   687   687 E AvrcpMediaPlayerWrapper:   └ Current Playstate: PlaybackState {state=3, position=2014, buffered position=0, speed=1.0, updated=226181, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=4, error=null}
+11-25 23:12:18.871   687   687 E AvrcpMediaPlayerWrapper:   └ QueueItem(0): { mediaId="NowPlayingId4" title="ليالي مسقط" artist="فرقة الخليج" album="" duration=0 trackPosition=1/1 }
+11-25 23:12:18.871   687   687 V AvrcpMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.demerdash.soundplayer
+11-25 23:12:18.871   687   687 D AvrcpMediaPlayerList: sendMediaUpdate
+11-25 23:12:18.871   687   687 D AvrcpMediaPlayerList: sendMediaUpdate state=PlaybackState {state=3, position=2014, buffered position=0, speed=1.0, updated=226181, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=4, error=null}
+11-25 23:12:59.398  5185  5185 V MediaPlayer: resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+11-25 23:12:59.398  5185  5185 V MediaPlayer: cleanDrmObj: mDrmObj=null mDrmSessionId=null
+11-25 23:12:59.398  5185  5185 V MediaPlayer: resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+11-25 23:12:59.398  5185  5185 V MediaPlayer: cleanDrmObj: mDrmObj=null mDrmSessionId=null
+11-25 23:12:59.402  1727  1758 I MediaProvider: Using lower FS for /storage/emulated/0/Music/SoundPlayerTest/01 Aurora Lights.mp3
+11-25 23:12:59.415   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:12:59.415   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:12:59.423   687   687 V AvrcpMediaPlayerWrapper: onPlaybackStateChanged(): com.demerdash.soundplayer : PlaybackState {state=2, position=0, buffered position=0, speed=0.0, updated=266732, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=0, error=null}
+11-25 23:12:59.423   492  1034 I MediaFocusControl: abandonAudioFocus() from uid/pid 10167/5185 clientId=android.media.AudioManager@d6d0390com.demerdash.soundplayer.playback.PlaybackService$11@fe09489
+11-25 23:12:59.424   687   687 V AvrcpMediaPlayerWrapper: onQueueChanged(): com.demerdash.soundplayer
+11-25 23:12:59.426   707   707 V MediaTimeout: schedule timeout for 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:12:59.430   687   687 V AvrcpMediaPlayerWrapper: onPlaybackStateChanged(): com.demerdash.soundplayer : PlaybackState {state=2, position=0, buffered position=0, speed=0.0, updated=266740, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=0, error=null}
+11-25 23:12:59.433  1727  1758 I MediaProvider: Using lower FS for /storage/emulated/0/Music/SoundPlayerTest/02 Desert Wind.mp3
+11-25 23:12:59.625   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:12:59.625   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:12:59.646   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:12:59.646   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:12:59.680   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:12:59.680   707   707 D InterruptionStateProvider: No alerting: filtered notification: 0|com.demerdash.soundplayer|7|null|10167
+11-25 23:13:01.444   687   687 E AvrcpMediaPlayerWrapper: Timeout while waiting for metadata to sync for com.demerdash.soundplayer
+11-25 23:13:01.444   687   687 E AvrcpMediaPlayerWrapper:   └ Current Metadata: { mediaId="currsong" title="Aurora Lights" artist="Nova Band" album="Northern Sky" duration=42057 trackPosition=1/5 }
+11-25 23:13:01.444   687   687 E AvrcpMediaPlayerWrapper:   └ Current Playstate: PlaybackState {state=2, position=0, buffered position=0, speed=0.0, updated=266740, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=0, error=null}
+11-25 23:13:01.444   687   687 E AvrcpMediaPlayerWrapper:   └ QueueItem(0): { mediaId="NowPlayingId0" title="Aurora Lights" artist="Nova Band" album="" duration=0 trackPosition=1/5 }
+11-25 23:13:01.444   687   687 E AvrcpMediaPlayerWrapper:   └ QueueItem(1): { mediaId="NowPlayingId1" title="Desert Wind" artist="Nova Band" album="" duration=0 trackPosition=2/5 }
+11-25 23:13:01.444   687   687 E AvrcpMediaPlayerWrapper:   └ QueueItem(2): { mediaId="NowPlayingId2" title="Green Valley" artist="Blue Coast" album="" duration=0 trackPosition=3/5 }
+11-25 23:13:01.444   687   687 E AvrcpMediaPlayerWrapper:   └ QueueItem(3): { mediaId="NowPlayingId3" title="Ocean Drive" artist="Blue Coast" album="" duration=0 trackPosition=4/5 }
+11-25 23:13:01.444   687   687 E AvrcpMediaPlayerWrapper:   └ QueueItem(4): { mediaId="NowPlayingId4" title="ليالي مسقط" artist="فرقة الخليج" album="" duration=0 trackPosition=5/5 }
+11-25 23:13:01.445   687   687 V AvrcpMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.demerdash.soundplayer
+11-25 23:13:01.445   687   687 D AvrcpMediaPlayerList: sendMediaUpdate
+11-25 23:13:01.445   687   687 D AvrcpMediaPlayerList: sendMediaUpdate state=PlaybackState {state=2, position=0, buffered position=0, speed=0.0, updated=266740, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=0, error=null}
+11-25 23:13:14.744   687   687 V AvrcpMediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+11-25 23:13:14.744   687   687 D AvrcpMediaPlayerList: Name of package changed: com.google.android.gms
+11-25 23:13:34.223   687   687 V AvrcpMediaPlayerList: onActiveSessionsChanged: number of controllers: 1
+11-25 23:13:34.224   687   687 D AvrcpMediaPlayerList: onActiveSessionsChanged: controller: com.demerdash.soundplayer
+11-25 23:13:34.224   687   687 D AvrcpMediaPlayerList: Already have a controller for the player: com.demerdash.soundplayer, updating instead
+11-25 23:13:34.225   687   687 D AvrcpMediaPlayerList: sendMediaUpdate
+11-25 23:13:34.225   687   687 D AvrcpMediaPlayerList: sendMediaUpdate state=PlaybackState {state=2, position=0, buffered position=0, speed=0.0, updated=266740, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=0, error=null}
+11-25 23:13:59.411   492   533 W ActivityManager: Stopping service due to app idle: u0a167 -4m31s807ms com.demerdash.soundplayer/.playback.PlaybackService
+11-25 23:13:59.414  5185  5185 V MediaPlayer: resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+11-25 23:13:59.414  5185  5185 V MediaPlayer: cleanDrmObj: mDrmObj=null mDrmSessionId=null
+11-25 23:13:59.414  5185  5185 V MediaPlayer: resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+11-25 23:13:59.414  5185  5185 V MediaPlayer: cleanDrmObj: mDrmObj=null mDrmSessionId=null
+11-25 23:13:59.415  5185  5185 V MediaPlayer: resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+11-25 23:13:59.415  5185  5185 V MediaPlayer: cleanDrmObj: mDrmObj=null mDrmSessionId=null
+11-25 23:13:59.415  5185  5185 V MediaPlayer: resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+11-25 23:13:59.415  5185  5185 V MediaPlayer: cleanDrmObj: mDrmObj=null mDrmSessionId=null
+11-25 23:13:59.418   687   687 I AvrcpMediaPlayerList: onMediaKeyEventSessionChanged: packageName=com.demerdash.soundplayer
+11-25 23:13:59.418   687   687 W AvrcpMediaPlayerList: com.demerdash.soundplayer is already the active player
+11-25 23:13:59.418   687   687 V AvrcpMediaPlayerList: onActiveSessionsChanged: number of controllers: 0
+11-25 23:13:59.418   687   687 W AvrcpMediaPlayerWrapper: The session was destroyed com.demerdash.soundplayer
+11-25 23:13:59.418   687   687 D AvrcpMediaPlayerList: sessionUpdatedCallback(): packageName: com.demerdash.soundplayer
+11-25 23:13:59.419   687   687 D AvrcpMediaPlayerList: sendMediaUpdate
+11-25 23:13:59.419   687   687 D AvrcpMediaPlayerList: sendMediaUpdate state=null
+11-25 23:13:59.419   687   687 D AvrcpMediaPlayerList: Removing media player com.demerdash.soundplayer
+11-25 23:13:59.419   687   687 D AvrcpMediaPlayerList: com.demerdash.soundplayer doesn't have a browse service. Recycle player ID.
+11-25 23:13:59.462  7984  7984 V MusicFXControlPanelReceiver: Package name: com.demerdash.soundplayer
+11-25 23:13:59.462  7984  7984 V MusicFXControlPanelEffect: closeSession(android.app.ReceiverRestrictedContext@3a39052, com.demerdash.soundplayer, 9)
+11-25 23:13:59.463  7984  7984 V MusicFXControlPanelReceiver: Package name: com.demerdash.soundplayer
+11-25 23:13:59.463  7984  7984 V MusicFXControlPanelEffect: closeSession(android.app.ReceiverRestrictedContext@3a39052, com.demerdash.soundplayer, 9)
+11-25 23:14:37.118   492  3067 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.demerdash.soundplayer/.MainActivity} from uid 2000
+11-25 23:14:37.174   492  3067 D MediaSessionService: Media button session is changed to com.demerdash.soundplayer/SoundPlayer (userId=0)
+11-25 23:14:37.179   687   687 W AvrcpMediaPlayerList: onMediaKeyEventSessionChanged(Token): Addressed Player changed to a player we didn't have a session for
+11-25 23:14:37.179   687   687 I AvrcpMediaPlayerList: Adding wrapped media player: com.demerdash.soundplayer at key: 1
+11-25 23:14:37.180   687   687 I AvrcpMediaPlayerList: onMediaKeyEventSessionChanged: token=com.demerdash.soundplayer
+11-25 23:14:37.181   687   687 D AvrcpMediaPlayerList: setActivePlayer(): setting player to com.demerdash.soundplayer
+11-25 23:14:37.182   687   687 D AvrcpMediaPlayerList: sendMediaUpdate
+11-25 23:14:37.182   687   687 I AvrcpMediaPlayerList: sendMediaUpdate: Creating a one item queue for a player with no queue
+11-25 23:14:37.182   687   687 D AvrcpMediaPlayerList: sendMediaUpdate state=null
+11-25 23:14:37.182   687   687 V AvrcpMediaPlayerList: onActiveSessionsChanged: number of controllers: 0
+11-25 23:14:37.185   294  7983 I EffectsFactory: EffectCreate() create_effect
+11-25 23:14:37.187   294   350 I EffectsFactory: EffectCreate() create_effect
+11-25 23:14:37.191   294  7983 I EffectsFactory: EffectCreate() create_effect
+11-25 23:14:37.203   294  7983 I EffectsFactory: EffectCreate() create_effect
+11-25 23:14:37.216  7984  7984 V MusicFXControlPanelReceiver: Package name: com.demerdash.soundplayer
+11-25 23:14:37.218  7984  7984 V MusicFXControlPanelEffect: openSession(android.app.ReceiverRestrictedContext@3a39052, com.demerdash.soundplayer, 97)
+11-25 23:14:37.256  7984  7984 V MusicFXControlPanelReceiver: Package name: com.demerdash.soundplayer
+11-25 23:14:37.256  7984  7984 V MusicFXControlPanelEffect: openSession(android.app.ReceiverRestrictedContext@3a39052, com.demerdash.soundplayer, 97)
+11-25 23:14:37.261  1727  7302 I MediaProvider: Using lower FS for /storage/emulated/0/Music/SoundPlayerTest/01 Aurora Lights.mp3
+11-25 23:14:37.280   687   687 V AvrcpMediaPlayerWrapper: onPlaybackStateChanged(): com.demerdash.soundplayer : PlaybackState {state=2, position=0, buffered position=0, speed=0.0, updated=364587, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=0, error=null}
+11-25 23:14:37.284   687   687 V AvrcpMediaPlayerWrapper: onQueueChanged(): com.demerdash.soundplayer
+11-25 23:14:37.284   687   687 V AvrcpMediaPlayerWrapper: onPlaybackStateChanged(): com.demerdash.soundplayer : PlaybackState {state=2, position=0, buffered position=0, speed=0.0, updated=364587, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=0, error=null}
+11-25 23:14:37.285   687   687 V AvrcpMediaPlayerWrapper: onPlaybackStateChanged(): com.demerdash.soundplayer : PlaybackState {state=2, position=0, buffered position=0, speed=0.0, updated=364587, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=0, error=null}
+11-25 23:14:37.360   492   532 D ArtManagerInternalImpl: /data/misc/iorapd/com.demerdash.soundplayer/1/com.demerdash.soundplayer.MainActivity/compiled_traces/compiled_trace.pb doesn't exist
+11-25 23:14:37.370   687   687 V AvrcpMediaPlayerWrapper: onPlaybackStateChanged(): com.demerdash.soundplayer : PlaybackState {state=2, position=0, buffered position=0, speed=0.0, updated=364680, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=0, error=null}
+11-25 23:14:37.391   492   532 I ActivityTaskManager: Displayed com.demerdash.soundplayer/.MainActivity: +219ms
+11-25 23:14:37.397  1727  7302 I MediaProvider: Using lower FS for /storage/emulated/0/Music/SoundPlayerTest/02 Desert Wind.mp3
+11-25 23:14:39.403   687   687 E AvrcpMediaPlayerWrapper: Timeout while waiting for metadata to sync for com.demerdash.soundplayer
+11-25 23:14:39.403   687   687 E AvrcpMediaPlayerWrapper:   └ Current Metadata: { mediaId="currsong" title="Aurora Lights" artist="Nova Band" album="Northern Sky" duration=42057 trackPosition=1/5 }
+11-25 23:14:39.404   687   687 E AvrcpMediaPlayerWrapper:   └ Current Playstate: PlaybackState {state=2, position=0, buffered position=0, speed=0.0, updated=364680, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=0, error=null}
+11-25 23:14:39.404   687   687 E AvrcpMediaPlayerWrapper:   └ QueueItem(0): { mediaId="NowPlayingId0" title="Aurora Lights" artist="Nova Band" album="" duration=0 trackPosition=1/5 }
+11-25 23:14:39.404   687   687 E AvrcpMediaPlayerWrapper:   └ QueueItem(1): { mediaId="NowPlayingId1" title="Desert Wind" artist="Nova Band" album="" duration=0 trackPosition=2/5 }
+11-25 23:14:39.404   687   687 E AvrcpMediaPlayerWrapper:   └ QueueItem(2): { mediaId="NowPlayingId2" title="Green Valley" artist="Blue Coast" album="" duration=0 trackPosition=3/5 }
+11-25 23:14:39.404   687   687 E AvrcpMediaPlayerWrapper:   └ QueueItem(3): { mediaId="NowPlayingId3" title="Ocean Drive" artist="Blue Coast" album="" duration=0 trackPosition=4/5 }
+11-25 23:14:39.404   687   687 E AvrcpMediaPlayerWrapper:   └ QueueItem(4): { mediaId="NowPlayingId4" title="ليالي مسقط" artist="فرقة الخليج" album="" duration=0 trackPosition=5/5 }
+11-25 23:14:39.404   687   687 V AvrcpMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.demerdash.soundplayer
+11-25 23:14:39.404   687   687 D AvrcpMediaPlayerList: sendMediaUpdate
+11-25 23:14:39.404   687   687 D AvrcpMediaPlayerList: sendMediaUpdate state=PlaybackState {state=2, position=0, buffered position=0, speed=0.0, updated=364680, actions=7991, custom actions=[Action:mName='Add to favorites, mIcon=2130837534, mExtras=null, Action:mName='Shuffle, mIcon=2130837567, mExtras=null, Action:mName='Repeat, mIcon=2130837555, mExtras=null], active item id=0, error=null}

@@ -1,0 +1,11 @@
+    NotificationRecord(0x067dcf08: pkg=com.demerdash.soundplayer user=UserHandle{0} id=7 tag=null importance=2 key=0|com.demerdash.soundplayer|7|null|10167: Notification(channel=playback shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x6a color=0xff7c3aed category=transport actions=5 vis=PUBLIC))
+      uid=10167 userId=0
+      opPkg=com.demerdash.soundplayer
+      icon=Icon(typ=RESOURCE pkg=com.demerdash.soundplayer id=0x7f020045)
+      flags=0x6a
+      pri=0
+      key=0|com.demerdash.soundplayer|7|null|10167
+--
+    post_frequency{user_id=0,pkg=com.demerdash.soundplayer,day=0,count=17,muted=17/17,demoted=17}
+    post_frequency{user_id=0,pkg=com.google.android.inputmethod.latin,day=0,count=2,muted=2/2,demoted=2}
+    post_frequency{user_id=0,pkg=com.google.android.videos,day=0,count=1,muted=1/1,demoted=1}

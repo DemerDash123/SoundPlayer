@@ -1,0 +1,49 @@
+Android 11
+== install
+Performing Streamed Install
+Success
+== push test music
+== launch
+Starting: Intent { cmp=com.demerdash.soundplayer/.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: com.demerdash.soundplayer/.MainActivity
+TotalTime: 734
+WaitTime: 737
+Complete
+PASS: python3 ci/ui.py exists text:Aurora Lights 15
+PASS: python3 ci/ui.py exists text:ليالي مسقط 5
+PASS: short (<30s) clip hidden
+== play a song
+state=3
+PASS: test 3 = 3
+FAIL: python3 ci/ui.py exists id:mini_player 5
+== now playing
+FAIL: python3 ci/ui.py exists id:np_title 5
+== synced lyrics
+FAIL: python3 ci/ui.py exists text:Welcome to SoundPlayer 5
+== media keys
+before: metadata: size=10, description=Desert Wind / after: metadata: size=9, description=Green Valley
+PASS: test metadata: size=9, description=Green Valley != metadata: size=10, description=Desert Wind
+state=2
+PASS: test 2 = 2
+PASS: test 3 = 3
+== notification
+PASS: grep -q com.demerdash.soundplayer ci-out/notification.txt
+== queue
+FAIL: python3 ci/ui.py exists text:Up next 5
+== equalizer
+FAIL: python3 ci/ui.py exists text:Bass boost 5
+== speed dialog
+== tabs
+FAIL: python3 ci/ui.py exists text:Northern Sky 5
+FAIL: python3 ci/ui.py exists text:Play 5
+FAIL: python3 ci/ui.py exists text:Favorites 5
+== search (Arabic without hamza/diacritics)
+FAIL: python3 ci/ui.py exists text:Ocean Drive 5
+== settings + light theme
+== rotate + background + resume
+FAIL: test  = 3
+== crash check
+PASS: no crashes / ANRs
+FAILURES: 10
