@@ -386,7 +386,7 @@ public final class NowPlayingActivity extends BaseActivity implements Dialogs.Ly
         fav.setImageResource(isFav ? R.drawable.ic_favorite : R.drawable.ic_favorite_border);
         fav.setImageTintList(ColorStateList.valueOf(isFav ? accent : 0xFFFFFFFF));
         float sp = service.speed();
-        speedLabel.setText(sp == 1f && service.pitch() == 1f ? getString(R.string.speed)
+        setText(speedLabel, sp == 1f && service.pitch() == 1f ? getString(R.string.speed)
                 : String.format(Locale.US, "%.2fx", sp));
         updateProgress();
     }
@@ -434,21 +434,26 @@ public final class NowPlayingActivity extends BaseActivity implements Dialogs.Ly
         if (!seeking) {
             int sec = (int) (p / 1000);
             if (seek.getProgress() != sec) seek.setProgress(sec);
-            pos.setText(Format.duration(p));
+            setText(pos, Format.duration(p));
         }
-        dur.setText(Format.duration(d));
+        setText(dur, Format.duration(d));
         lyrics.setPosition(p + 150);
         long rem = service.sleepRemaining();
         if (rem > 0) {
-            sleepLabel.setText(Format.duration(rem));
+            setText(sleepLabel, Format.duration(rem));
             sleepIcon.setImageTintList(ColorStateList.valueOf(accent));
         } else if (rem == 0) {
-            sleepLabel.setText(R.string.sleep_end_of_track);
+            setText(sleepLabel, getString(R.string.sleep_end_of_track));
             sleepIcon.setImageTintList(ColorStateList.valueOf(accent));
         } else {
-            sleepLabel.setText(R.string.sleep_title);
+            setText(sleepLabel, getString(R.string.sleep_title));
             sleepIcon.setImageTintList(ColorStateList.valueOf(0xFFFFFFFF));
         }
+    }
+
+    /** Avoids redundant layout passes and accessibility events from the 4x/second ticker. */
+    private static void setText(TextView v, CharSequence text) {
+        if (!text.toString().contentEquals(v.getText())) v.setText(text);
     }
 
     private void loadLyrics(final Song s) {

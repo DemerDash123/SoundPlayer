@@ -64,7 +64,7 @@ check $UI exists "id:np_title" 5
 log "synced lyrics"
 $UI tap "id:np_btn_lyrics" && sleep 2
 shot lyrics
-check $UI exists "text:Welcome to SoundPlayer" 5
+check $UI exists "contains:Welcome to SoundPlayer" 5
 $UI tap "id:np_btn_lyrics"; sleep 1
 
 log "media keys"
@@ -91,7 +91,7 @@ adb shell input keyevent KEYCODE_BACK; sleep 1
 
 log "equalizer"
 $UI tap "id:np_btn_eq" && sleep 2
-$UI tap "text:Rock" 5; sleep 1
+$UI tap "text:Bass Boost" 5; sleep 1
 shot equalizer
 check $UI exists "text:Bass boost" 5
 adb shell input keyevent KEYCODE_BACK; sleep 1

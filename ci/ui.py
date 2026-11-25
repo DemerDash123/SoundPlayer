@@ -50,7 +50,7 @@ def find(root, query):
             return node
         if kind == "text" and (node.get("text") == value or node.get("content-desc") == value):
             return node
-        if kind == "contains" and value.lower() in (node.get("text") or "").lower():
+        if kind == "contains" and value.lower() in ((node.get("text") or "") + (node.get("content-desc") or "")).lower():
             return node
     return None
 

@@ -141,6 +141,10 @@ public final class LyricsView extends View {
         current = -1;
         builtWidth = -1;
         userUntil = 0;
+        // Expose the lyrics to TalkBack (the text is drawn on a canvas, so it has no text nodes).
+        StringBuilder desc = new StringBuilder(getContext().getString(R.string.lyrics));
+        for (int i = 0; i < texts.size() && desc.length() < 4000; i++) desc.append('\n').append(texts.get(i));
+        setContentDescription(hasLyrics ? desc.toString() : getContext().getString(R.string.no_lyrics));
         scroller.forceFinished(true);
         if (scrollAnim != null) scrollAnim.cancel();
         rebuild();
