@@ -1,0 +1,6 @@
+Row: 0 title=Aurora Lights, artist=Nova Band, album=Northern Sky, duration=42057, is_music=1
+Row: 1 title=Desert Wind, artist=Nova Band, album=Northern Sky, duration=42057, is_music=1
+Row: 2 title=ليالي مسقط, artist=فرقة الخليج, album=Gulf Album, duration=42057, is_music=1
+Row: 3 title=Ocean Drive, artist=Blue Coast, album=Waves, duration=41000, is_music=1
+Row: 4 title=Green Valley, artist=Blue Coast, album=Waves, duration=40000, is_music=1
+Row: 5 title=Short Clip, artist=<unknown>, album=SoundPlayerTest, duration=5068, is_music=1
