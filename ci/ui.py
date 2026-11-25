@@ -13,15 +13,34 @@ import xml.etree.ElementTree as ET
 PKG = "com.demerdash.soundplayer"
 
 
+def dismiss_system_dialogs(root):
+    """Emulators sometimes show 'X isn't responding' for system apps; press Wait and continue."""
+    for node in root.iter("node"):
+        if "isn't responding" in (node.get("text") or "") or "isn\u2019t responding" in (node.get("text") or ""):
+            for b in root.iter("node"):
+                if b.get("text") in ("Wait", "Close app"):
+                    x, y = center(b)
+                    subprocess.run(["adb", "shell", "input", "tap", str(x), str(y)])
+                    print("dismissed system ANR dialog")
+                    time.sleep(1)
+                    return True
+    return False
+
+
 def dump():
-    for _ in range(3):
-        subprocess.run(["adb", "shell", "uiautomator", "dump", "/sdcard/ui.xml"], capture_output=True)
+    for _ in range(6):
+        subprocess.run(["adb", "shell", "rm", "-f", "/sdcard/ui.xml"], capture_output=True)
+        r = subprocess.run(["adb", "shell", "uiautomator", "dump", "/sdcard/ui.xml"], capture_output=True, text=True)
         out = subprocess.run(["adb", "exec-out", "cat", "/sdcard/ui.xml"], capture_output=True).stdout
         try:
-            return ET.fromstring(out)
+            root = ET.fromstring(out)
+            if dismiss_system_dialogs(root):
+                continue
+            return root
         except ET.ParseError:
+            print("dump failed:", (r.stdout + r.stderr).strip()[:200])
             time.sleep(1)
-    raise SystemExit("could not dump UI")
+    return ET.fromstring("<hierarchy/>")
 
 
 def find(root, query):

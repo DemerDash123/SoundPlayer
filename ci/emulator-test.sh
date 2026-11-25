@@ -18,6 +18,8 @@ meta() { adb shell dumpsys media_session | grep -m1 -oE "metadata: size=[0-9]+, 
 check() { if "$@"; then pass "$*"; else fail "$*"; fi; }
 
 adb wait-for-device
+sleep 15
+adb shell am broadcast -a android.intent.action.CLOSE_SYSTEM_DIALOGS > /dev/null 2>&1
 adb shell settings put global window_animation_scale 0
 adb shell settings put global transition_animation_scale 0
 adb shell settings put global animator_duration_scale 0
@@ -111,7 +113,7 @@ $UI tap "text:Playlists" && sleep 2 && shot playlists
 check $UI exists "text:Favorites" 5
 $UI tap "text:Songs"; sleep 1
 
-log "search (Arabic without hamza/diacritics)"
+log "search"
 $UI tap "id:btn_search" && sleep 2
 adb shell input text "Ocean"; sleep 2
 shot search

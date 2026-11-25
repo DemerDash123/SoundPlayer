@@ -231,7 +231,7 @@ public final class NowPlayingActivity extends BaseActivity implements Dialogs.Ly
         seek.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar s, int progress, boolean fromUser) {
-                if (fromUser) pos.setText(Format.duration(progress));
+                if (fromUser) pos.setText(Format.duration(progress * 1000L));
             }
 
             @Override
@@ -242,7 +242,7 @@ public final class NowPlayingActivity extends BaseActivity implements Dialogs.Ly
             @Override
             public void onStopTrackingTouch(SeekBar s) {
                 seeking = false;
-                if (service != null) service.seekTo(s.getProgress());
+                if (service != null) service.seekTo(s.getProgress() * 1000L);
             }
         });
 
@@ -428,9 +428,12 @@ public final class NowPlayingActivity extends BaseActivity implements Dialogs.Ly
         if (service == null || service.current() == null) return;
         long p = service.position();
         long d = service.duration();
-        seek.setMax((int) Math.max(1, d));
+        // One-second resolution: smooth enough, and keeps accessibility events (TalkBack) calm.
+        int maxSec = (int) Math.max(1, d / 1000);
+        if (seek.getMax() != maxSec) seek.setMax(maxSec);
         if (!seeking) {
-            seek.setProgress((int) p);
+            int sec = (int) (p / 1000);
+            if (seek.getProgress() != sec) seek.setProgress(sec);
             pos.setText(Format.duration(p));
         }
         dur.setText(Format.duration(d));

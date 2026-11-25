@@ -50,7 +50,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        api-level: [34, 30]
+        include:
+          - api-level: 34
+            target: default
+          - api-level: 30
+            target: google_apis
     steps:
       - uses: actions/checkout@v4
 
@@ -69,7 +73,7 @@ jobs:
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: ${{ matrix.api-level }}
-          target: google_apis
+          target: ${{ matrix.target }}
           arch: x86_64
           profile: pixel_6
           disable-animations: true
