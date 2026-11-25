@@ -8,8 +8,8 @@ Starting: Intent { cmp=com.demerdash.soundplayer/.MainActivity }
 Status: ok
 LaunchState: COLD
 Activity: com.demerdash.soundplayer/.MainActivity
-TotalTime: 905
-WaitTime: 908
+TotalTime: 774
+WaitTime: 776
 Complete
 PASS: python3 ci/ui.py exists text:Aurora Lights 15
 PASS: python3 ci/ui.py exists text:ليالي مسقط 5
@@ -21,7 +21,7 @@ PASS: python3 ci/ui.py exists id:mini_player 5
 == now playing (UI navigation runs paused so uiautomator can reach idle)
 PASS: python3 ci/ui.py exists id:np_title 5
 == synced lyrics
-FAIL: python3 ci/ui.py exists text:Welcome to SoundPlayer 5 :: NOT FOUND: text:Welcome to SoundPlayer 
+PASS: python3 ci/ui.py exists contains:Welcome to SoundPlayer 5
 == media keys
 before: metadata: size=10, description=Aurora Lights / after: metadata: size=10, description=Desert Wind
 PASS: test metadata: size=10, description=Desert Wind != metadata: size=10, description=Aurora Lights
@@ -46,4 +46,4 @@ PASS: python3 ci/ui.py exists text:Ocean Drive 5
 PASS: test 3 = 3
 == crash check
 PASS: no crashes / ANRs
-FAILURES: 1
+FAILURES: 0
