@@ -8,8 +8,8 @@ Starting: Intent { cmp=com.demerdash.soundplayer/.MainActivity }
 Status: ok
 LaunchState: COLD
 Activity: com.demerdash.soundplayer/.MainActivity
-TotalTime: 734
-WaitTime: 737
+TotalTime: 872
+WaitTime: 877
 Complete
 PASS: python3 ci/ui.py exists text:Aurora Lights 15
 PASS: python3 ci/ui.py exists text:ليالي مسقط 5
@@ -39,7 +39,7 @@ FAIL: python3 ci/ui.py exists text:Bass boost 5
 FAIL: python3 ci/ui.py exists text:Northern Sky 5
 FAIL: python3 ci/ui.py exists text:Play 5
 FAIL: python3 ci/ui.py exists text:Favorites 5
-== search (Arabic without hamza/diacritics)
+== search
 FAIL: python3 ci/ui.py exists text:Ocean Drive 5
 == settings + light theme
 == rotate + background + resume
