@@ -4,7 +4,6 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.demerdash.soundplayer.BaseActivity;
@@ -22,7 +21,7 @@ public final class MiniPlayer {
     private final TextView title;
     private final TextView artist;
     private final PlayPauseView play;
-    private final ProgressBar progress;
+    private final ProgressLineView progress;
     private long lastSongId = Long.MIN_VALUE;
     private boolean shown;
 
@@ -116,6 +115,6 @@ public final class MiniPlayer {
     public void updateProgress(PlaybackService s) {
         if (s == null || s.current() == null) return;
         long d = s.duration();
-        progress.setProgress(d > 0 ? (int) Math.min(1000, 1000L * s.position() / d) : 0);
+        progress.setProgress(d > 0 ? (float) s.position() / d : 0f);
     }
 }

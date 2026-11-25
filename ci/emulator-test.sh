@@ -13,9 +13,9 @@ log() { echo "== $*" | tee -a "$OUT/summary.txt"; }
 pass() { echo "PASS: $*" | tee -a "$OUT/summary.txt"; }
 fail() { echo "FAIL: $*" | tee -a "$OUT/summary.txt"; FAILS=$((FAILS + 1)); }
 shot() { STEP=$((STEP + 1)); adb exec-out screencap -p > "$OUT/$(printf %02d $STEP)_$1.png"; }
-state() { adb shell dumpsys media_session | grep -m1 -oE "state=PlaybackState \{state=[0-9]+" | grep -oE "[0-9]+$"; }
+state() { adb shell dumpsys media_session | grep -m1 -oE "state=PlaybackState \{state=[A-Z_]*\(?[0-9]+" | grep -oE "[0-9]+$"; }
 meta() { adb shell dumpsys media_session | grep -m1 -oE "metadata: size=[0-9]+, description=[^,]*" ; }
-check() { if "$@"; then pass "$*"; else fail "$*"; fi; }
+check() { local o; if o=$("$@" 2>&1); then pass "$*"; else fail "$* :: $(echo "$o" | tail -3 | tr '\n' ' ')"; fi; }
 
 adb wait-for-device
 sleep 15
@@ -55,17 +55,16 @@ S=$(state); echo "state=$S" | tee -a "$OUT/summary.txt"
 check test "$S" = "3"
 check $UI exists "id:mini_player" 5
 
-log "now playing"
+log "now playing (UI navigation runs paused so uiautomator can reach idle)"
+adb shell input keyevent KEYCODE_MEDIA_PAUSE; sleep 2
 $UI tap "id:mini_title" && sleep 3
 shot now_playing
 check $UI exists "id:np_title" 5
 
 log "synced lyrics"
 $UI tap "id:np_btn_lyrics" && sleep 2
-adb shell input keyevent KEYCODE_MEDIA_PAUSE; sleep 1
 shot lyrics
 check $UI exists "text:Welcome to SoundPlayer" 5
-adb shell input keyevent KEYCODE_MEDIA_PLAY; sleep 1
 $UI tap "id:np_btn_lyrics"; sleep 1
 
 log "media keys"
@@ -77,6 +76,8 @@ S=$(state); echo "state=$S" | tee -a "$OUT/summary.txt"
 check test "$S" = "2"
 adb shell input keyevent KEYCODE_MEDIA_PLAY; sleep 2
 check test "$(state)" = "3"
+shot now_playing_next_track
+adb shell input keyevent KEYCODE_MEDIA_PAUSE; sleep 2
 
 log "notification"
 adb shell dumpsys notification --noredact | grep -A3 "pkg=$PKG" | head -20 > "$OUT/notification.txt"
@@ -131,8 +132,9 @@ $UI tap "id:btn_menu" && sleep 1 && $UI tap "text:Settings" && sleep 2
 $UI tap "text:Theme" && sleep 1 && $UI tap "text:Dark" && sleep 2
 adb shell input keyevent KEYCODE_BACK; sleep 1
 
-log "rotate + background + resume"
-adb shell input keyevent KEYCODE_HOME; sleep 3
+log "background playback"
+adb shell input keyevent KEYCODE_MEDIA_PLAY; sleep 2
+adb shell input keyevent KEYCODE_HOME; sleep 5
 check test "$(state)" = "3"
 adb shell am start -n $PKG/.MainActivity > /dev/null; sleep 3
 shot resumed
