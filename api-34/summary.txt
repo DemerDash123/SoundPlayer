@@ -8,8 +8,8 @@ Starting: Intent { cmp=com.demerdash.soundplayer/.MainActivity }
 Status: ok
 LaunchState: COLD
 Activity: com.demerdash.soundplayer/.MainActivity
-TotalTime: 815
-WaitTime: 830
+TotalTime: 572
+WaitTime: 582
 Complete
 PASS: python3 ci/ui.py exists text:Aurora Lights 15
 PASS: python3 ci/ui.py exists text:ليالي مسقط 5
@@ -40,6 +40,14 @@ PASS: python3 ci/ui.py exists text:Northern Sky 5
 PASS: python3 ci/ui.py exists text:Play 5
 PASS: python3 ci/ui.py exists text:Favorites 5
 == search
+PASS: python3 ci/ui.py exists text:Ocean Drive 5
+== tab order: Playlists is second
+PASS: tab order
+== multi-select songs -> add to new playlist
+PASS: python3 ci/ui.py exists text:3 selected 5
+PASS: python3 ci/ui.py exists text:Shuffle all 5
+PASS: python3 ci/ui.py exists text:RoadTrip 5
+PASS: python3 ci/ui.py exists contains:3 songs 5
 PASS: python3 ci/ui.py exists text:Ocean Drive 5
 == settings + light theme
 == background playback
