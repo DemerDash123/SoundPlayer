@@ -122,6 +122,36 @@ check $UI exists "text:Ocean Drive" 5
 adb shell input keyevent KEYCODE_BACK; sleep 1
 adb shell input keyevent KEYCODE_BACK; sleep 1
 
+log "tab order: Playlists is second"
+python3 - <<'PY' | tee -a "$OUT/summary.txt"
+import subprocess, xml.etree.ElementTree as ET, re
+subprocess.run(["adb","shell","uiautomator","dump","/sdcard/ui.xml"],capture_output=True)
+root=ET.fromstring(subprocess.run(["adb","exec-out","cat","/sdcard/ui.xml"],capture_output=True).stdout)
+xs={n.get("text"):int(re.findall(r"\d+",n.get("bounds"))[0]) for n in root.iter("node") if n.get("text") in ("Songs","Playlists","Albums")}
+print("PASS: tab order" if xs.get("Songs",9e9) < xs.get("Playlists",9e9) < xs.get("Albums",-1) else f"FAIL: tab order {xs}")
+PY
+
+log "multi-select songs -> add to new playlist"
+$UI tap "text:Songs"; sleep 1
+$UI longtap "text:Aurora Lights" && sleep 1
+$UI tap "text:Desert Wind" && $UI tap "text:Ocean Drive" && sleep 1
+shot multi_select
+check $UI exists "text:3 selected" 5
+$UI tap "id:sel_add" && sleep 1
+$UI tap "contains:New playlist" && sleep 1
+adb shell input text "RoadTrip"; sleep 1
+$UI tap "text:CREATE" 3 || $UI tap "text:Create" 3; sleep 2
+check $UI exists "text:Shuffle all" 5
+$UI tap "text:Playlists" && sleep 2
+shot playlists_with_new
+check $UI exists "text:RoadTrip" 5
+$UI tap "text:RoadTrip" && sleep 2
+shot new_playlist_detail
+check $UI exists "contains:3 songs" 5
+check $UI exists "text:Ocean Drive" 5
+adb shell input keyevent KEYCODE_BACK; sleep 1
+$UI tap "text:Songs"; sleep 1
+
 log "settings + light theme"
 $UI tap "id:btn_menu" && sleep 1 && $UI tap "text:Settings" && sleep 2
 shot settings

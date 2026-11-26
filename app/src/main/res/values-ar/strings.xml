@@ -52,6 +52,15 @@
         <item quantity="many">%d ألبوماً</item>
         <item quantity="other">%d ألبوم</item>
     </plurals>
+    <plurals name="selected_count">
+        <item quantity="zero">لم يتم تحديد شيء</item>
+        <item quantity="one">تم تحديد أغنية واحدة</item>
+        <item quantity="two">تم تحديد أغنيتين</item>
+        <item quantity="few">تم تحديد %d أغانٍ</item>
+        <item quantity="many">تم تحديد %d أغنية</item>
+        <item quantity="other">تم تحديد %d أغنية</item>
+    </plurals>
+    <string name="select_all">تحديد الكل</string>
     <string name="duration_hours_minutes">%1$d س %2$d د</string>
     <string name="duration_minutes">%d دقيقة</string>
 

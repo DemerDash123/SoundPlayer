@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/selection_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top"
+    android:background="?attr/spSurfaceHigh"
+    android:clickable="true"
+    android:elevation="12dp"
+    android:gravity="center_vertical"
+    android:minHeight="64dp"
+    android:orientation="horizontal"
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp"
+    android:visibility="gone">
+
+    <ImageButton
+        android:id="@+id/sel_close"
+        style="@style/SP.IconButton"
+        android:contentDescription="@string/close"
+        android:src="@drawable/ic_close" />
+
+    <TextView
+        android:id="@+id/sel_count"
+        style="@style/SP.Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/sel_all"
+        style="@style/SP.IconButton"
+        android:contentDescription="@string/select_all"
+        android:src="@drawable/ic_select_all" />
+
+    <ImageButton
+        android:id="@+id/sel_add"
+        style="@style/SP.IconButton"
+        android:contentDescription="@string/menu_add_to_playlist"
+        android:src="@drawable/ic_playlist_add"
+        android:tint="?attr/spAccent" />
+
+    <ImageButton
+        android:id="@+id/sel_more"
+        style="@style/SP.IconButton"
+        android:contentDescription="@string/more"
+        android:src="@drawable/ic_more" />
+</LinearLayout>

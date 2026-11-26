@@ -33,6 +33,7 @@ public final class SearchActivity extends BaseActivity implements RowAdapter.Cal
     private TextView empty;
     private View clear;
     private RowAdapter adapter;
+    private com.demerdash.soundplayer.ui.SelectionController selection;
     private List<Song> songResults = new ArrayList<>();
     private String lastQuery = "";
 
@@ -55,6 +56,8 @@ public final class SearchActivity extends BaseActivity implements RowAdapter.Cal
         ThemeUtil.padInsets(list, false, true, true);
         adapter = new RowAdapter(this, this);
         list.setAdapter(adapter);
+        selection = new com.demerdash.soundplayer.ui.SelectionController(this);
+        selection.attach(adapter);
 
         findViewById(R.id.search_back).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,6 +116,15 @@ public final class SearchActivity extends BaseActivity implements RowAdapter.Cal
         if (!MusicLibrary.get(this).isLoaded()) MusicLibrary.get(this).load(false);
     }
 
+    @Override
+    public void onBackPressed() {
+        if (selection != null && selection.isActive()) {
+            selection.finish();
+            return;
+        }
+        super.onBackPressed();
+    }
+
     private void showKeyboard() {
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         if (imm != null) imm.showSoftInput(input, InputMethodManager.SHOW_IMPLICIT);
@@ -124,6 +136,7 @@ public final class SearchActivity extends BaseActivity implements RowAdapter.Cal
     }
 
     private void search(String raw) {
+        if (selection != null) selection.finish();
         String q = TextNorm.normalize(raw.trim());
         lastQuery = q;
         List<Row> rows = new ArrayList<>();

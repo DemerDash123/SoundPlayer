@@ -52,10 +52,10 @@ public final class MainActivity extends BaseActivity implements MusicLibrary.Lis
 
     private static final int REQ_PERMS = 10;
     private static final int TAB_SONGS = 0;
-    private static final int TAB_ALBUMS = 1;
-    private static final int TAB_ARTISTS = 2;
-    private static final int TAB_FOLDERS = 3;
-    private static final int TAB_PLAYLISTS = 4;
+    private static final int TAB_PLAYLISTS = 1;
+    private static final int TAB_ALBUMS = 2;
+    private static final int TAB_ARTISTS = 3;
+    private static final int TAB_FOLDERS = 4;
 
     private static final long ID_SHUFFLE = -10;
     private static final long ID_NEW_PLAYLIST = -11;
@@ -73,6 +73,7 @@ public final class MainActivity extends BaseActivity implements MusicLibrary.Lis
     private View sortButton;
     private int tab;
     private RowAdapter adapter;
+    private com.demerdash.soundplayer.ui.SelectionController selection;
     private AlbumGridAdapter albumAdapter;
     private List<Song> visibleSongs = new ArrayList<>();
     private final int[][] scrollPos = new int[5][2];
@@ -111,6 +112,8 @@ public final class MainActivity extends BaseActivity implements MusicLibrary.Lis
         adapter = new RowAdapter(this, this);
         list.setAdapter(adapter);
         list.setFastScrollEnabled(true);
+        selection = new com.demerdash.soundplayer.ui.SelectionController(this);
+        selection.attach(adapter);
         albumAdapter = new AlbumGridAdapter(this, this);
         grid.setAdapter(albumAdapter);
         touchSlop = android.view.ViewConfiguration.get(this).getScaledTouchSlop();
@@ -168,6 +171,15 @@ public final class MainActivity extends BaseActivity implements MusicLibrary.Lis
     protected void onResume() {
         super.onResume();
         checkPermission();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (selection != null && selection.isActive()) {
+            selection.finish();
+            return;
+        }
+        super.onBackPressed();
     }
 
     @Override
@@ -288,7 +300,7 @@ public final class MainActivity extends BaseActivity implements MusicLibrary.Lis
 
     private void buildTabs() {
         LinearLayout tabs = findViewById(R.id.tabs);
-        int[] labels = {R.string.tab_songs, R.string.tab_albums, R.string.tab_artists, R.string.tab_folders, R.string.tab_playlists};
+        int[] labels = {R.string.tab_songs, R.string.tab_playlists, R.string.tab_albums, R.string.tab_artists, R.string.tab_folders};
         int[][] states = {{android.R.attr.state_selected}, {}};
         int[] colors = {ThemeUtil.color(this, R.attr.spOnAccent), ThemeUtil.color(this, R.attr.spText)};
         ColorStateList csl = new ColorStateList(states, colors);
@@ -316,6 +328,7 @@ public final class MainActivity extends BaseActivity implements MusicLibrary.Lis
     }
 
     private void selectTab(int t, boolean animate) {
+        if (selection != null) selection.finish();
         saveScroll();
         tab = t;
         Prefs.setLastTab(this, t);
@@ -373,7 +386,7 @@ public final class MainActivity extends BaseActivity implements MusicLibrary.Lis
     public boolean dispatchTouchEvent(MotionEvent ev) {
         switch (ev.getActionMasked()) {
             case MotionEvent.ACTION_DOWN:
-                tracking = perm.getVisibility() != View.VISIBLE && inside(pages, ev) && !inside(findViewById(R.id.mini_player), ev);
+                tracking = !selection.isActive() && perm.getVisibility() != View.VISIBLE && inside(pages, ev) && !inside(findViewById(R.id.mini_player), ev);
                 swiping = false;
                 downX = ev.getRawX();
                 downY = ev.getRawY();

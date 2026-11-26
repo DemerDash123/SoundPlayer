@@ -28,6 +28,17 @@
             android:layout_gravity="center"
             android:importantForAccessibility="no"
             android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/row_check"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_check"
+            android:importantForAccessibility="no"
+            android:scaleType="center"
+            android:src="@drawable/ic_check"
+            android:tint="?attr/spOnAccent"
+            android:visibility="gone" />
     </FrameLayout>
 
     <LinearLayout

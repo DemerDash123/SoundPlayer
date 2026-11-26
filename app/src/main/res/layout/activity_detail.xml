@@ -49,4 +49,6 @@
     </LinearLayout>
 
     <include layout="@layout/mini_player" />
+
+    <include layout="@layout/selection_bar" />
 </FrameLayout>

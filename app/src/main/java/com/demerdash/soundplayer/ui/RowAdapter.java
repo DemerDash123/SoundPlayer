@@ -43,6 +43,8 @@ public final class RowAdapter extends BaseAdapter implements SectionIndexer {
     private String[] sections = new String[0];
     private int[] sectionPos = new int[0];
     private boolean sectionsEnabled;
+    private SelectionController selection;
+    private final int accentSoft;
 
     public RowAdapter(Context c, Callback cb) {
         ctx = c;
@@ -52,6 +54,11 @@ public final class RowAdapter extends BaseAdapter implements SectionIndexer {
         thumbPx = ThemeUtil.dp(c, 48);
         accent = ThemeUtil.color(c, R.attr.spAccent);
         text = ThemeUtil.color(c, R.attr.spText);
+        accentSoft = ThemeUtil.color(c, R.attr.spAccentSoft);
+    }
+
+    void setSelection(SelectionController s) {
+        selection = s;
     }
 
     public void setRows(List<Row> r, boolean withSections) {
@@ -183,7 +190,14 @@ public final class RowAdapter extends BaseAdapter implements SectionIndexer {
         h.title.setTextColor(playingRow ? accent : text);
         h.playing.setVisibility(playingRow ? View.VISIBLE : View.GONE);
         h.playing.setAnimating(playingRow && isPlaying);
-        boolean more = showMore && row.type != Row.ACTION;
+        final boolean selecting = selection != null && selection.isActive();
+        final boolean isSong = row.type == Row.SONG;
+        boolean checked = selecting && isSong && selection.isSelected((Song) row.data);
+        h.check.setVisibility(checked ? View.VISIBLE : View.GONE);
+        if (checked) v.setBackgroundColor(accentSoft);
+        else v.setBackgroundResource(h.ripple);
+        v.setAlpha(selecting && !isSong ? 0.4f : 1f);
+        boolean more = showMore && row.type != Row.ACTION && !selecting;
         h.more.setVisibility(more ? View.VISIBLE : View.GONE);
         h.more.setOnClickListener(more ? new View.OnClickListener() {
             @Override
@@ -194,12 +208,23 @@ public final class RowAdapter extends BaseAdapter implements SectionIndexer {
         v.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (selection != null && selection.isActive()) {
+                    if (isSong) selection.toggle((Song) row.data);
+                    return;
+                }
                 if (callback != null) callback.onRowClick(row, position);
             }
         });
-        v.setOnLongClickListener(more ? new View.OnLongClickListener() {
+        final boolean canLong = isSong && selection != null || (showMore && row.type != Row.ACTION);
+        v.setOnLongClickListener(canLong ? new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
+                if (isSong && selection != null) {
+                    if (selection.isActive()) selection.toggle((Song) row.data);
+                    else selection.start((Song) row.data);
+                    return true;
+                }
+                if (selection != null && selection.isActive()) return true;
                 if (callback != null) callback.onRowMore(row, h(view).more, position);
                 return true;
             }
@@ -219,8 +244,14 @@ public final class RowAdapter extends BaseAdapter implements SectionIndexer {
         final TextView trailing;
         final ImageButton more;
         final PlayingBarsView playing;
+        final ImageView check;
+        final int ripple;
 
         Holder(View v) {
+            check = v.findViewById(R.id.row_check);
+            android.util.TypedValue tv = new android.util.TypedValue();
+            v.getContext().getTheme().resolveAttribute(android.R.attr.selectableItemBackground, tv, true);
+            ripple = tv.resourceId;
             art = v.findViewById(R.id.row_art);
             icon = v.findViewById(R.id.row_icon);
             title = v.findViewById(R.id.row_title);

@@ -73,7 +73,11 @@ def main():
     if node is None:
         print(f"NOT FOUND: {query}")
         sys.exit(1)
-    if action == "tap":
+    if action == "longtap":
+        x, y = center(node)
+        subprocess.run(["adb", "shell", "input", "swipe", str(x), str(y), str(x), str(y), "900"], check=True)
+        print(f"long-pressed {query} at {x},{y}")
+    elif action == "tap":
         x, y = center(node)
         subprocess.run(["adb", "shell", "input", "tap", str(x), str(y)], check=True)
         print(f"tapped {query} at {x},{y}")

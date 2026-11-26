@@ -85,6 +85,7 @@ public final class DetailActivity extends BaseActivity implements RowAdapter.Cal
     private MusicLibrary library;
     private PlaylistStore store;
     private RowAdapter adapter;
+    private com.demerdash.soundplayer.ui.SelectionController selection;
     private ListView list;
     private View header;
     private TextView barTitle;
@@ -127,6 +128,8 @@ public final class DetailActivity extends BaseActivity implements RowAdapter.Cal
         list.addHeaderView(header, null, false);
         adapter = new RowAdapter(this, this);
         list.setAdapter(adapter);
+        selection = new com.demerdash.soundplayer.ui.SelectionController(this);
+        selection.attach(adapter);
         list.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
@@ -179,6 +182,15 @@ public final class DetailActivity extends BaseActivity implements RowAdapter.Cal
         library.addListener(this);
         store.addListener(this);
         load();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (selection != null && selection.isActive()) {
+            selection.finish();
+            return;
+        }
+        super.onBackPressed();
     }
 
     @Override
