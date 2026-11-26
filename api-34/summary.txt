@@ -8,8 +8,8 @@ Starting: Intent { cmp=com.demerdash.soundplayer/.MainActivity }
 Status: ok
 LaunchState: COLD
 Activity: com.demerdash.soundplayer/.MainActivity
-TotalTime: 572
-WaitTime: 582
+TotalTime: 737
+WaitTime: 738
 Complete
 PASS: python3 ci/ui.py exists text:Aurora Lights 15
 PASS: python3 ci/ui.py exists text:ليالي مسقط 5
@@ -49,9 +49,16 @@ PASS: python3 ci/ui.py exists text:Shuffle all 5
 PASS: python3 ci/ui.py exists text:RoadTrip 5
 PASS: python3 ci/ui.py exists contains:3 songs 5
 PASS: python3 ci/ui.py exists text:Ocean Drive 5
+== multi-select remove from playlist
+PASS: python3 ci/ui.py exists contains:1 song 5
 == settings + light theme
 == background playback
 PASS: test 3 = 3
+== multi-select delete from device
+PASS: python3 ci/ui.py exists text:2 selected 5
+PASS: deleted songs gone from library
+PASS: python3 ci/ui.py exists text:Aurora Lights 5
+PASS: python3 ci/ui.py exists text:3 songs 5
 == crash check
 PASS: no crashes / ANRs
 FAILURES: 0
