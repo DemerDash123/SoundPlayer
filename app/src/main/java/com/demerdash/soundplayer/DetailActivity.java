@@ -279,6 +279,7 @@ public final class DetailActivity extends BaseActivity implements RowAdapter.Cal
                     return;
                 }
                 userPlaylist = p;
+                selection.setPlaylist(p.id);
                 songs = new ArrayList<>();
                 for (int i = 0; i < p.songIds.size(); i++) {
                     Song s = library.song(p.songIds.get(i));

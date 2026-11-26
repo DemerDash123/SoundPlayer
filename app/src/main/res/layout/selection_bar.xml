@@ -44,6 +44,12 @@
         android:tint="?attr/spAccent" />
 
     <ImageButton
+        android:id="@+id/sel_delete"
+        style="@style/SP.IconButton"
+        android:contentDescription="@string/delete"
+        android:src="@drawable/ic_delete" />
+
+    <ImageButton
         android:id="@+id/sel_more"
         style="@style/SP.IconButton"
         android:contentDescription="@string/more"

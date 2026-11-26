@@ -141,6 +141,18 @@ public final class PlaylistStore {
         changed(true);
     }
 
+    /** Removes every occurrence of the given songs from a playlist. */
+    public int removeSongs(long id, java.util.Set<Long> songIds) {
+        Playlist p = find(id);
+        if (p == null) return 0;
+        int before = p.songIds.size();
+        java.util.Iterator<Long> it = p.songIds.iterator();
+        while (it.hasNext()) if (songIds.contains(it.next())) it.remove();
+        int removed = before - p.songIds.size();
+        if (removed > 0) changed(true);
+        return removed;
+    }
+
     public void move(long id, int from, int to) {
         Playlist p = find(id);
         if (p == null || from < 0 || to < 0 || from >= p.songIds.size() || to >= p.songIds.size()) return;

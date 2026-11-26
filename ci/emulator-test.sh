@@ -149,6 +149,14 @@ $UI tap "text:RoadTrip" && sleep 2
 shot new_playlist_detail
 check $UI exists "contains:3 songs" 5
 check $UI exists "text:Ocean Drive" 5
+
+log "multi-select remove from playlist"
+$UI longtap "text:Aurora Lights" && sleep 1
+$UI tap "text:Ocean Drive" && sleep 1
+$UI tap "id:sel_delete" && sleep 1
+shot remove_choice
+$UI tap "text:Remove from playlist" && sleep 2
+check $UI exists "contains:1 song" 5
 adb shell input keyevent KEYCODE_BACK; sleep 1
 $UI tap "text:Songs"; sleep 1
 
@@ -168,6 +176,21 @@ adb shell input keyevent KEYCODE_HOME; sleep 5
 check test "$(state)" = "3"
 adb shell am start -n $PKG/.MainActivity > /dev/null; sleep 3
 shot resumed
+
+log "multi-select delete from device"
+adb shell input keyevent KEYCODE_MEDIA_PAUSE; sleep 1
+$UI tap "text:Songs"; sleep 1
+$UI longtap "text:Green Valley" && sleep 1
+$UI tap "text:Ocean Drive" && sleep 1
+check $UI exists "text:2 selected" 5
+$UI tap "id:sel_delete" && sleep 2
+shot delete_confirm
+$UI tap "text:Allow" 6 || $UI tap "text:ALLOW" 3 || $UI tap "text:Delete" 3 || $UI tap "text:DELETE" 3
+sleep 6
+shot after_delete
+if $UI exists "text:Green Valley" 2 > /dev/null; then fail "Green Valley still listed"; else pass "deleted songs gone from library"; fi
+check $UI exists "text:Aurora Lights" 5
+check $UI exists "text:3 songs" 5
 
 log "crash check"
 adb logcat -d > "$OUT/logcat.txt"

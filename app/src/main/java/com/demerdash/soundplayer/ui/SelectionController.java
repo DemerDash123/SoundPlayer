@@ -31,6 +31,7 @@ public final class SelectionController {
     private final Set<Long> selected = new HashSet<>();
     private RowAdapter adapter;
     private boolean active;
+    private long playlistId = -1;
 
     public SelectionController(BaseActivity a) {
         activity = a;
@@ -58,6 +59,12 @@ public final class SelectionController {
                 finish();
             }
         });
+        a.findViewById(R.id.sel_delete).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                delete();
+            }
+        });
         a.findViewById(R.id.sel_more).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,6 +76,40 @@ public final class SelectionController {
     public void attach(RowAdapter a) {
         adapter = a;
         a.setSelection(this);
+    }
+
+    /** On a user playlist page, Delete offers "Remove from playlist" too. */
+    public void setPlaylist(long id) {
+        playlistId = id;
+    }
+
+    private void delete() {
+        final List<Song> songs = selectedSongs();
+        if (songs.isEmpty()) return;
+        if (playlistId < 0) {
+            Dialogs.confirmDelete(activity, songs);
+            finish();
+            return;
+        }
+        String[] options = {activity.getString(R.string.menu_remove_from_playlist), activity.getString(R.string.menu_delete)};
+        new android.app.AlertDialog.Builder(activity)
+                .setTitle(activity.getResources().getQuantityString(R.plurals.selected_count, songs.size(), songs.size()))
+                .setItems(options, new android.content.DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(android.content.DialogInterface d, int which) {
+                        if (which == 0) {
+                            Set<Long> ids = new HashSet<>();
+                            for (Song s : songs) ids.add(s.id);
+                            int n = com.demerdash.soundplayer.data.PlaylistStore.get(activity).removeSongs(playlistId, ids);
+                            Toast.makeText(activity, activity.getResources().getQuantityString(R.plurals.removed_count, n, n), Toast.LENGTH_SHORT).show();
+                        } else {
+                            Dialogs.confirmDelete(activity, songs);
+                        }
+                        finish();
+                    }
+                })
+                .setNegativeButton(R.string.cancel, null)
+                .show();
     }
 
     public boolean isActive() {

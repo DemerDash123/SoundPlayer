@@ -536,6 +536,10 @@ public final class Dialogs {
     }
 
     public static void confirmDelete(final BaseActivity a, final List<Song> songs) {
+        if (Build.VERSION.SDK_INT >= 30) {
+            deleteSongs(a, songs, true); // Android shows its own "Allow … to delete" confirmation
+            return;
+        }
         new AlertDialog.Builder(a)
                 .setMessage(a.getString(R.string.delete_songs_q, songs.size()))
                 .setPositiveButton(R.string.delete, new DialogInterface.OnClickListener() {

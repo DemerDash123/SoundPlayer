@@ -61,6 +61,14 @@
         <item quantity="other">تم تحديد %d أغنية</item>
     </plurals>
     <string name="select_all">تحديد الكل</string>
+    <plurals name="removed_count">
+        <item quantity="zero">لم تتم إزالة أي أغنية</item>
+        <item quantity="one">تمت إزالة أغنية واحدة من القائمة</item>
+        <item quantity="two">تمت إزالة أغنيتين من القائمة</item>
+        <item quantity="few">تمت إزالة %d أغانٍ من القائمة</item>
+        <item quantity="many">تمت إزالة %d أغنية من القائمة</item>
+        <item quantity="other">تمت إزالة %d أغنية من القائمة</item>
+    </plurals>
     <string name="duration_hours_minutes">%1$d س %2$d د</string>
     <string name="duration_minutes">%d دقيقة</string>
 

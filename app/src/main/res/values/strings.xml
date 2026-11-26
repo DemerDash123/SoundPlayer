@@ -52,6 +52,10 @@
         <item quantity="other">%d selected</item>
     </plurals>
     <string name="select_all">Select all</string>
+    <plurals name="removed_count">
+        <item quantity="one">%d song removed from playlist</item>
+        <item quantity="other">%d songs removed from playlist</item>
+    </plurals>
     <string name="duration_hours_minutes">%1$d h %2$d min</string>
     <string name="duration_minutes">%d min</string>
 
